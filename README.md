@@ -1,11 +1,13 @@
-# GROMACS_TUTORIAL
+##GROMACS_TUTORIAL##
 
 ##Gromacs commands for simulating protein-protein complex in solvent##
 
 Requirements:
-*Install Xmgrace for generating graphs from .xvg files  
-*Create a file containing all the essential parameter files including the processed .pdb file. 
-*open terminal direct to the PWD which contains all the essential parameter files.
+#*Install Xmgrace for generating graphs from .xvg files#
+
+#*Create a file containing all the essential parameter files including the processed .pdb file# 
+
+#*open terminal direct to the PWD which contains all the essential parameter files#
 
 #Step 1: Generating protein topology files#
 

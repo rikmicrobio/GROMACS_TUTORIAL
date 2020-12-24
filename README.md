@@ -2,8 +2,8 @@
 
 ## Gromacs commands for simulating protein-protein complex in solvent <br>
 
-# Requirements: <br>
-#*Install Xmgrace for generating graphs from .xvg files <br>
+### Requirements: <br>
+#### *Install Xmgrace for generating graphs from .xvg files <br>
 
 ###  > Create a file containing all the essential parameter files including the processed .pdb file <br>
 
@@ -33,13 +33,13 @@
 
 "gmx genion -s ions.tpr -o complex_solv_ions.gro -p topol.top -pname NA -nname CL -neutral" <br>
 
-## Step 5: Energy minimization <br>
+## Step 6: Energy minimization <br>
 
 "gmx grompp -f minim.mdp -c complex_solv_ions.gro -p topol.top -o em.tpr" <br>
 
 "gmx mdrun -v -deffnm em" <br>
 
-#Step 6: Generate potential energy graph# <br>
+## Step 7: Generate potential energy graph# <br>
 
 "gmx energy -f em.edr -o potential.xvg" <br>
 
@@ -47,7 +47,7 @@
 
 "xmgrace potential.xvg" <br>
  
-## step 7: NVT equilibration <br>
+## Step 8: NVT equilibration <br>
 
 "gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -o nvt.tpr" <br>
 
@@ -59,7 +59,7 @@
 
 ##  > xmgrace temperature.xvg <br>
  
-## Step 8: NPT  equilibration <br>
+## Step 9: NPT  equilibration <br>
 
 "gmx grompp -f npt.mdp -c nvt.gro -r nvt.gro -t nvt.cpt -p topol.top -o npt.tpr" <br>
 
@@ -74,7 +74,7 @@
 ###  > At the prompt, type "24 0" <br>
 
  
-## Step 9: Production MDrun <br>
+## Step 10: Production MDrun <br>
 
 "gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_1.tpr" <br>
 

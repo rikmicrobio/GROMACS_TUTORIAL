@@ -3,7 +3,7 @@
 ## What is molecular dynamics simulation??
 ### Molecular dynamics (MD) is a computer simulation method for analyzing the physical movements of atoms and molecules. The atoms and molecules are allowed to interact for a fixed period of time, giving a view of the dynamic "evolution" of the system.
 
-# 
+![title]("320px-MD_water.gif") 
 
 ## Gromacs commands for simulating protein-protein complex in solvent <br>
 
